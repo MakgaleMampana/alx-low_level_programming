@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c test.c
+./a.out
