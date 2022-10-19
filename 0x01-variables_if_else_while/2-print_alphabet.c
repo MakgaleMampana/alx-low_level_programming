@@ -14,7 +14,6 @@ char lcl = 'a';
 for (lcl = 'a'; lcl <= 'z'; lcl++)
 {
 putchar(lcl);
-putchar('\n');
 }
 return (0);
 }
