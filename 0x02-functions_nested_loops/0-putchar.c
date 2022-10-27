@@ -5,13 +5,13 @@
 /**
 * main - Entry point
 *
-* Description:funtion that prints _putchar
+*Description: funtion that prints _putchar
 *
 *return: Always 0 (Success)
 */
 int main(void)
 {
-	printf("_putchar");
+	printf ("_putchar");
 
 	return(0);
 }
