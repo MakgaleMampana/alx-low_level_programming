@@ -6,7 +6,7 @@
 *@c: input variable
 *description: 'check if c is lowercase'
 *
-*return: return 1 if lowercase, 0 otherwise
+*Return:1 if c is lowercase,else  0
 */
 
 int _islower(int c)
