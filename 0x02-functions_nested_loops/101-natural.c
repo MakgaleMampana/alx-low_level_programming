@@ -5,9 +5,8 @@
 *main- entry point
 *
 *description: 'sum multiples of 3 or 5 that are below 1024'
-*@sum: is the sum alue of all the values with multiple of 3 or 5
-*@n:is each value below 1024
-*Return: Always 0 (Succes)
+*
+* Return: Always 0 (Succes)
 */
 
 int main(void)
