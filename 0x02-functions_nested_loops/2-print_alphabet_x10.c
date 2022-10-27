@@ -21,7 +21,7 @@ void print_alphabet(void)
 			_putchar(i);
 
 		}
-		l++
+		l++;
 		_putchar('\n');
 	}
 
