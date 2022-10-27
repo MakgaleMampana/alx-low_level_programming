@@ -3,10 +3,10 @@
 /**
 *_islower- entry point
 *
-*@c: input variable 
+*@c: input variable
 *description: 'check if c is lowercase'
 *
-*return: always 0 (succes)
+*return: return 1 if lowercase, 0 otherwise
 */
 
 int _islower(int c)
