@@ -9,7 +9,7 @@
 *return: the sum of all multiples
 */
 
-int main(void)
+void main(void)
 {
 	int sum = 0;
 	int n = 0;
