@@ -9,7 +9,7 @@
 *return: the sum of all multiples
 */
 
-void main(void)
+int main(void)
 {
 	int sum = 0;
 	int n = 0;
@@ -25,6 +25,6 @@ void main(void)
 	printf("%d",sum);
 	printf("\n");
 
-
+	return (0);
 }
 
