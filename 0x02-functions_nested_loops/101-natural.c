@@ -6,7 +6,7 @@
 *
 *description: 'sum multiples of 3 or 5 that are below 1024'
 *
-*return: the sum of all multiples
+*return:0 ALWAYS (SUCCESS)
 */
 
 int main(void)
@@ -22,7 +22,7 @@ int main(void)
 		}
 		n++;
 	}
-	printf("%d",sum);
+	printf("%d", sum);
 	printf("\n");
 
 	return (0);
