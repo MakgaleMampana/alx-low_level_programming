@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
-* main - Entry point
+*main - Entry point
 *
 *Description: funtion that prints _putchar
 *
@@ -11,7 +11,7 @@
 */
 int main(void)
 {
-	printf ("_putchar");
+	printf("_putchar");
 
 	return(0);
 }
