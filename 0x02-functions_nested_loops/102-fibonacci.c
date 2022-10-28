@@ -11,9 +11,9 @@
 
 int main(void)
 {
-	int i = 1;
-	int j = 2;
-	int x = (i + j);
+	long long int i = 1;
+	long long int j = 2;
+	long long int x = (i + j);
 	int count = 3;
 
 	printf("%d", i);
