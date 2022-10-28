@@ -12,20 +12,20 @@
 
 int main(void)
 {
-	long long i = 1;
-	long long j = 2;
-	long long x = (i + j);
+	long  i = 1;
+	long  j = 2;
+	long  x = (i + j);
 	int count = 3;
 
-	printf("%llu", i);
+	printf("%ld", i);
 	printf(", ");
-	printf("%llu", j);
+	printf("%ld", j);
 	printf(", ");
 
 	while (count <= 50)
 	{
 
-		printf("%llu", x);
+		printf("%ld", x);
 
 		if (count < 50)
 		{
