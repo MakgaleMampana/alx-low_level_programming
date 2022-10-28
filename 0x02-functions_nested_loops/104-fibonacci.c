@@ -12,9 +12,9 @@
 
 int main(void)
 {
-	long  i = 1;
-	long  j = 2;
-	long  x = (i + j);
+	unsigned long  i = 1;
+	unsigned long  j = 2;
+	unsigned long  x = (i + j);
 	int count = 3;
 
 	printf("%ld", i);
