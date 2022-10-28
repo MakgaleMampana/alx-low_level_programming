@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
 *print_number- entry point
@@ -12,16 +13,34 @@
 
 void print_number(int n)
 {
-	if (n >= 10)
+	if (abs(n) >= 10)
 	{
-		_putchar((n / 10) + '0');
-		_putchar((n % 10) + '0');
+		if (n < 0)
+		{
+			_putchar('-');
+			_putchar((abs(n) / 10) + '0');
+			_putchar((abs(n) % 10) + '0');
+		}
+		else
+		{
+			_putchar((n / 10) + '0');
+			_putchar((n % 10) + '0');
+		}
 	}
 	else
 	{
-		_putchar(n + '0');
+		if (n < 0)
+		{
+			_putchar('-');
+			_putchar(abs(n) + '0');
+		}
+		else
+		{
+			_putchar(n + '0');
+		}
 	}
-	/*_putchar('\n');*/
+
+	_putchar('\n');
 
 
 }
