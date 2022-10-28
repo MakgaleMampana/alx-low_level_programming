@@ -11,7 +11,7 @@
 *Return:the product of the 2 intergers
 */
 
-int add(int i, int j)
+int mul(int i, int j)
 {
 
 	return ((i * j));
