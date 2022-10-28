@@ -12,26 +12,24 @@
 
 void print_triangle(int size)
 {
-	int count = 1;
-	int count_2 = 1;
+	int i;
+	int j;
 
 	if (size > 0)
 	{
-		while (count <= size)
+		for (i = 1; i <= size; i++)
 		{
-			for (count_2 = 1; count_2 < (size - count); count_2++)
+
+			for (j = i; j < size; j++)
 			{
 				_putchar(' ');
 			}
-			for (count_2 = 1; count_2 <= count; count_2++)
+			for (j = 1; j <= i; j++)
 			{
 				_putchar('#');
 			}
 			_putchar('\n');
-			count++;
-
 		}
-		_putchar('\n');
 	}
 	else
 	{
