@@ -17,15 +17,15 @@ int main(void)
 	unsigned long  x = (i + j);
 	int count = 3;
 
-	printf("%ld", i);
+	printf("%lu", i);
 	printf(", ");
-	printf("%ld", j);
+	printf("%lu", j);
 	printf(", ");
 
 	while (count <= 98)
 	{
 
-		printf("%ld", x);
+		printf("%lu", x);
 
 		if (count < 98)
 		{
