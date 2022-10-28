@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
 *main- entry point
@@ -11,9 +12,9 @@
 
 int main(void)
 {
-	long long int i = 1;
-	long long int j = 2;
-	long long int x = (i + j);
+	int i = 1;
+	int j = 2;
+	int x = (i + j);
 	int count = 3;
 
 	printf("%d", i);
@@ -30,9 +31,9 @@ int main(void)
 		{
 			printf(", ");
 		}
-		i = j;
-		j = x;
-		x = (i + j);
+		i = abs(j);
+		j = abs(x);
+		x = abs((i + j));
 		count++;
 	}
 	printf("\n");
