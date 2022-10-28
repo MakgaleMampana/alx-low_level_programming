@@ -24,7 +24,7 @@ int main(void)
 		r = (rand() % 25) + 65;
 
 		str[i] = r;
-		seed = seed + r
+		seed = seed + r;
 	}
 	str[i++] = 2772 - seed;
 	str[i++] = '\0';
