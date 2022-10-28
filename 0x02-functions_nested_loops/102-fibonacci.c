@@ -31,9 +31,9 @@ int main(void)
 		{
 			printf(", ");
 		}
-		i = abs(j);
-		j = abs(x);
-		x = abs((i + j));
+		i = j;
+		j = x;
+		x = (i + j);
 		count++;
 	}
 	printf("\n");
