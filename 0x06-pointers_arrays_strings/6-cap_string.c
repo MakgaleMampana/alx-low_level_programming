@@ -1,28 +1,39 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-
 /**
  * cap_string- entry point
  *
  * Description: function that capitalizes all words of a string.
- *@ch: input variable
+ *@s: input variable
  *
  * Return: ch
  */
-char *string_toupper(char *ch)
+char *cap_string(char *s)
 {
 	int i = 0;
 
-	while (*(ch + i) != '\0')
+	while (*(s + i) != '\0')
 	{
-		if (*(ch + i) >= 97 && *(ch + i) <= 122)
+		if (i == 0 && (*(s + i) >= 97 && *(s + i) <= 122))
 		{
-			*(ch + i) = *(ch + i) - ' ';
+			*(s + i) = *(s + i) - ' ';
+			i++;
 		}
-		i++;
+		if (*(s + i) == ' ' || *(s + i) == '\n' || *(s + i) == '\t'
+				|| *(s + i) == ',' || *(s + i) == ';' || *(s + i) == '!'
+				|| *(s + i) == '?' || *(s + i) == '"' || *(s + i) == '('
+				|| *(s + i) == ')' || *(s + i) == '{' || *(s + i) == '}'
+				|| *(s + i) == '.')
+		{
+			i++;
+			if (*(s + i) >= 97 && *(s + i) <= 122)
+			{
+				*(s + i) = *(s + i) - ' ';
+			}
+		}
+		else
+			i++;
 	}
-	return (ch);
-
-
+	return (s)
 }
