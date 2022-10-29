@@ -5,7 +5,8 @@
 /**
  * string_toupper- entry point
  *
- * Description: function that changes all lowercase letters of a string to uppercase
+ * Description: function that changes all lowercase
+ * letters of a string to uppercase
  *@ch: input variable
  *
  * Return: ch
