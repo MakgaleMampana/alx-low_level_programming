@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *_memset- Entry point
+ *char *_memcpy- Entry point
  *
  *Description: copies n bytes from memory area src to memory area dest
  *@dest: input variable

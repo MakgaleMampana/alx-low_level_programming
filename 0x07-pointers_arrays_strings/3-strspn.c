@@ -1,13 +1,14 @@
 #include "main.h"
 
 /**
- * _strspn- gets the length of a prefix substring
- *
- *  @s: input variable
- *  @accept: input variable 2
- *
- *  Return: the number of bytes in the initial segment
- *  */
+*_strspn- Entry Point
+*
+*Description: gets the length of a prefix substring
+*@s: input variable
+*@accept: input variable 2
+*
+*Return: the number of bytes in the initial segment
+*/
 
 unsigned int _strspn(char *s, char *accept)
 {

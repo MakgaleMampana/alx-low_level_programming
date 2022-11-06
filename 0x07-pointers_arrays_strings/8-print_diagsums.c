@@ -2,13 +2,14 @@
 #include <stdio.h>
 
 /**
- * print_diagsums- prints the sum of the two diagonals of a square matrix
- *
- *  @a: input variable
- *  @size: input variable 2
- *
- *  Return:
- *  */
+*print_diagsums- Entry point
+*Description: prints the sum of the two diagonals of a square matrix
+*
+*@a: input variable
+*@size: input variable 2
+*
+*Return:
+*/
 
 void print_diagsums(int *a, int size)
 {

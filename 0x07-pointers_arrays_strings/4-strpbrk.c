@@ -1,13 +1,15 @@
 #include "main.h"
 
 /**
- * _strpbrk- searches a string for any of a set of bytes
- *
- *  @s: input variable
- *  @accept: input variable 2
- *
- *  Return: pointer to the byte in s
- *  */
+* _strpbrk- Entry point
+*
+*Description: searches a string for any of a set of bytes
+*
+*@s: input variable
+*@accept: input variable 2
+*
+*Return: pointer to the byte in s
+*/
 
 char *_strpbrk(char *s, char *accept)
 {

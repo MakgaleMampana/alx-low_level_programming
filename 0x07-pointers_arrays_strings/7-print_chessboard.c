@@ -2,12 +2,13 @@
 #include <stdio.h>
 
 /**
- * print_chessboard - prints a chessboard
- *
- *  @a: input variable
- *
- *  Return:
- *  */
+*print_chessboard- Entry point
+*
+*Description: prints a chessboard
+*@a: input variable
+*
+*Return:
+*/
 
 void print_chessboard(char (*a)[8])
 {
