@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _puts_rev_recursion-Entry point
+ * _print_rev_recursion-Entry point
  * Description:function
  * @s: input variable
  * Return :
  */
-void _puts_rev_recursion(char *s)
+void _print_rev_recursion(char *s)
 
 {
 	char *rev;
