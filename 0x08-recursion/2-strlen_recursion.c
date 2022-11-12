@@ -4,7 +4,7 @@
  * _strlen_recursion-Entry point
  * Description:function
  * @s: input variable
- * Return :
+ * Return :Always 0 (Success)
  */
 int _strlen_recursion(char *s)
 
