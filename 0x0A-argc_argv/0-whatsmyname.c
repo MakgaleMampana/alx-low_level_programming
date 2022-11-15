@@ -5,7 +5,7 @@
  * Description: Function
  * @argc: Input variable
  * @argv: Input variable 2
- * Return : Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 
 int main(int argc, char *argv[])
