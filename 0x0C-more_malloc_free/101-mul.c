@@ -10,11 +10,12 @@
  */
 void print_error(char *msg)
 {
-	int i = 0;
-
-	while (msg[i])
-		i++;
-	write(STDERR_FILENO, msg, i);
+	while (*msg)
+	{
+		_putchar(*msg);
+		msg++;
+	}
+	_putchar('\n');
 	exit(98);
 }
 
@@ -72,6 +73,11 @@ int main(int argc, char **argv)
 	product = multiply(num1, num2);
 
 	len = sprintf(buffer, "%d\n", product);
-	write(STDOUT_FILENO, buffer, len);
+	while (*buffer)
+	{
+		_putchar(*buffer);
+		buffer++;
+	}
 	return (0);
 }
+
