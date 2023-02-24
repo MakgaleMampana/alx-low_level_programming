@@ -1,14 +1,15 @@
-#include <stdlib.h>
+#include "function_pointers.h"
+
 /**
- * print_name- entry point
- * @name: input variable
- * @f: input variable 2
+ *print_name - prints a name after is has been passed through another function
+ *
+ *@name: name to be prited
+ *@f: pointer to the function that will be used with name
+ *
+ *Return: nothing
  */
 void print_name(char *name, void (*f)(char *))
 {
-	if (name == NULL || f == NULL)
-	{
-		return;
-	}
-	f(name);
+	if (f != NULL && name != NULL)
+		f(name);
 }
