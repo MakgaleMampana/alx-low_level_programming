@@ -10,9 +10,11 @@
  */
 void print_error(char *msg)
 {
-	while (*msg)
-		_putchar(*(msg++));
-	_putchar('\n');
+	int i = 0;
+
+	while (msg[i])
+		i++;
+	write(STDERR_FILENO, msg, i);
 	exit(98);
 }
 
@@ -58,6 +60,8 @@ int multiply(int num1, int num2)
 int main(int argc, char **argv)
 {
 	int num1, num2, product;
+	char buffer[12];
+	int len;
 
 	if (argc != 3)
 		print_error("Error: Two arguments required");
@@ -67,6 +71,7 @@ int main(int argc, char **argv)
 
 	product = multiply(num1, num2);
 
-	printf("%d\n", product);
+	len = sprintf(buffer, "%d\n", product);
+	write(STDOUT_FILENO, buffer, len);
 	return (0);
 }
