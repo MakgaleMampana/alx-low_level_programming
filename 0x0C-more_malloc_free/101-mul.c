@@ -5,79 +5,114 @@
 #include <string.h>
 
 /**
- * print_error - Prints an error message to stderr and exits with status 98.
- * @msg: The error message to print.
+ * main - multiplies two positive numbers
+ * @argc: argument count
+ * @argv: argument vector
+ *
+ * Return: 0 on success, 98 on failure
+ */
+int main(int argc, char *argv[])
+{
+    int num1, num2, result;
+
+    if (argc != 3 || !is_integer(argv[1]) || !is_integer(argv[2]))
+    {
+        print_error("Error");
+        exit(98);
+    }
+
+    num1 = parse_integer(argv[1]);
+    num2 = parse_integer(argv[2]);
+
+    result = multiply(num1, num2);
+
+    print_number(result);
+    _putchar('\n');
+
+    return (0);
+}
+
+/**
+ * print_error - prints an error message to stderr
+ * @msg: the error message to print
  */
 void print_error(char *msg)
 {
-	while (*msg)
-	{
-		_putchar(*msg);
-		msg++;
-	}
-	_putchar('\n');
-	exit(98);
+    while (*msg)
+    {
+        _putchar(*msg++);
+    }
+    _putchar('\n');
 }
 
 /**
- * parse_integer - Parses an integer from a string.
- * @str: The string to parse.
+ * is_integer - checks if a string is an integer
+ * @str: the string to check
  *
- * Return: The parsed integer.
+ * Return: 1 if the string is an integer, 0 otherwise
  */
-int parse_integer(char *str)
+int is_integer(char *str)
 {
-	int num = 0;
+    if (*str == '-')
+        str++;
 
-	while (*str)
-	{
-		if (*str < '0' || *str > '9')
-			print_error("Error: Invalid number");
-		num = num * 10 + (*str - '0');
-		str++;
-	}
-	return (num);
+    while (*str)
+    {
+        if (!isdigit(*str))
+            return (0);
+        str++;
+    }
+
+    return (1);
 }
 
 /**
- * multiply - Multiplies two positive integers.
- * @num1: The first integer.
- * @num2: The second integer.
+ * parse_integer - parses an integer from a string
+ * @str: the string to parse
  *
- * Return: The product of the two integers.
+ * Return: the integer value of the string
+ */
+int parse_integer(const char *str)
+{
+    int value = 0;
+
+    while (*str)
+    {
+        value *= 10;
+        value += (*str - '0');
+        str++;
+    }
+
+    return (value);
+}
+
+/**
+ * multiply - multiplies two integers
+ * @num1: the first integer
+ * @num2: the second integer
+ *
+ * Return: the product of the two integers
  */
 int multiply(int num1, int num2)
 {
-	return (num1 * num2);
+    return (num1 * num2);
 }
 
 /**
- * main - Entry point.
- * @argc: The number of command-line arguments.
- * @argv: An array of pointers to the command-line arguments.
- *
- * Return: 0 on success, 98 on failure.
+ * print_number - prints a number to stdout
+ * @num: the number to print
  */
-int main(int argc, char **argv)
+void print_number(int num)
 {
-	int num1, num2, product;
-	char buffer[12];
-	int len;
+    if (num < 0)
+    {
+        _putchar('-');
+        num *= -1;
+    }
 
-	if (argc != 3)
-		print_error("Error: Two arguments required");
+    if (num / 10)
+        print_number(num / 10);
 
-	num1 = parse_integer(argv[1]);
-	num2 = parse_integer(argv[2]);
-
-	product = multiply(num1, num2);
-
-	len = sprintf(buffer, "%d\n", product);
-	while (*buffer)
-	{
-		_putchar(*buffer);
-		buffer++;
-	}
-	return (0);
+    _putchar((num % 10) + '0');
 }
 
